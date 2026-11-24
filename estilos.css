@@ -1,0 +1,92 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #eef2f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+.contenedor {
+  background: white;
+  padding: 32px;
+  border-radius: 15px;
+  width: 400px;
+  max-width: 100%;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+}
+
+h1 {
+  color: #1e3a8a;
+}
+
+h2 {
+  font-size: 20px;
+  color: #334155;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 5px;
+  border: 1px solid #ccd2db;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.salir {
+  background: #dc2626;
+}
+
+.salir:hover {
+  background: #b91c1c;
+}
+
+#qr {
+  width: 200px;
+  max-width: 100%;
+  margin: 15px auto;
+}
+
+#mensaje {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#informacion {
+  color: #166534;
+  font-weight: bold;
+}

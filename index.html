@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login seguro 2FA</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+  <main class="contenedor">
+    <h1>Acceso seguro</h1>
+    <p>Autenticación de dos factores</p>
+
+    <section id="paso1">
+      <h2>Paso 1. Iniciar sesión</h2>
+      <label for="correo">Correo</label>
+      <input id="correo" type="email" autocomplete="username">
+      <label for="password">Contraseña</label>
+      <input id="password" type="password" autocomplete="current-password">
+      <button id="btnLogin" onclick="iniciarSesion()">Iniciar sesión</button>
+    </section>
+
+    <section id="paso2" hidden>
+      <h2>Paso 2. Verificación</h2>
+      <p id="instrucciones"></p>
+      <img id="qr" alt="QR de configuración" hidden>
+      <label for="codigo">Código de seis dígitos</label>
+      <input id="codigo" inputmode="numeric" maxlength="6" autocomplete="one-time-code">
+      <button id="btnVerificar" onclick="verificarCodigo()">Verificar código</button>
+      <button onclick="consultarProteccion()">Probar acceso sin 2FA</button>
+      <button class="salir" onclick="cerrarSesion()">Cancelar</button>
+    </section>
+
+    <section id="panel" hidden>
+      <h2>Acceso autorizado</h2>
+      <p id="informacion"></p>
+      <button class="salir" onclick="cerrarSesion()">Cerrar sesión</button>
+    </section>
+
+    <p id="mensaje" role="status"></p>
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>
